@@ -1,1 +1,4 @@
 ffmpeg -i input.mp4 -vf scale=960:-1 -movflags faststart -vcodec libx264 -crf 20 -g 1 -pix_fmt yuv420p output.mp4
+
+
+ffmpeg -i spill.mp4 -vf "scale=960:-2,fps=60" -vcodec libx264 -pix_fmt yuv420p -crf 18 -preset veryfast -g 1 -movflags faststart spilled.mp4
